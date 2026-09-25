@@ -1,8 +1,8 @@
 .PHONY: clean program
 
-program : all
+program : checker
 
-all : task1 task2
+checker : task1 task2
 
 task1 : task1.o
 	gcc task1.o -o task1
@@ -16,6 +16,6 @@ task1.o: task1.c
 task2.o: task2.c
 	gcc -c task2.c
 clean:
-	rm -f all task1.o task2.o task1 task2
+	rm -f checker task1.o task2.o task1 task2
 
-#Thank you for the help :)
+# Sorry if you wanted the executable files included... At least you get to try out my cool makefile!
